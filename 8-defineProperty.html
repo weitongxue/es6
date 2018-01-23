@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+var data = {};
+
+/*Object.defineProperty(data,'b',{
+	value:5,
+	// writable:true
+	// enumerable:true
+});*/
+// console.log(data);
+
+Object.defineProperty(data,'b',{
+	
+	set(newValue){
+		console.log(newValue);
+	},
+	get(){
+		return 89;
+	}
+});
+data.b = 5;
+console.log(data.b)
+
+
+
+
+</script>
+</html>

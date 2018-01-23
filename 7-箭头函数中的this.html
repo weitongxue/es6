@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+var a = 10;
+
+var obj = {
+	a:5,
+	func:function (){
+		console.log(this.a);
+	},
+	test:function (){
+		// console.log(this);
+		// var that = this;
+		setTimeout(()=>{
+			this.func();
+		},1);
+	}
+}
+
+obj.test();
+</script>
+</html>

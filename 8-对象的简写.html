@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+var a = 5;
+var obj = {
+	a,
+	/*b:function (){
+		console.log(this.a);
+	}*/
+	b(){
+		console.log(this.a);
+	}
+}
+// console.log(obj);
+// obj.b();
+// console.log(Object.keys(obj));
+var obj2 = {
+	c:10
+}
+
+Object.assign(obj2,obj);
+console.log(obj);
+
+
+
+
+
+</script>
+</html>

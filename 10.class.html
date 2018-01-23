@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+/*function Person(name,sex){
+
+	this.name = name;
+	this.sex = sex;
+	this.showName = function (){
+		alert(this.name);
+	}
+}	
+
+var obj1 = new Person("tangcaiye","男");
+
+function Manager(name,sex,password){
+
+	Person.call(this,name,sex);
+	this.password = password;
+}
+
+var obj2 = new Manager("tangcaicai",'男');
+// alert(obj2.name);
+obj2.showName();
+*/
+
+class Person{
+	constructor(name,sex){
+		this.name = name;
+		this.sex = sex;
+	}
+	showName(){
+		alert(this.name)
+	}
+	static getMethod(){
+		return "hello";
+	}
+}
+var obj1 = new Person("tangcaiye","男");
+// console.log(obj1.name);
+// obj1.showName()
+// console.log(obj1.getMethod())
+console.log(Person.getMethod())
+
+class Manager extends Person{
+
+	constructor(name,sex,password){
+
+		super(name,sex);
+		this.password = password;
+	}
+}
+var obj2 = new Manager("唐菜菜","男");
+// console.log(obj2.name)
+// obj2.showName()
+
+
+</script>
+</html>

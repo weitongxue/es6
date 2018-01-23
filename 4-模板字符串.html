@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+用户名:<input type="text" id="txt1">
+留言：<input type="text" id="txt2">
+<input type="button" value="点击提交留言" id="btn1">
+<ul id="ul1">
+	<!-- <li>
+		<p>留言的内容</p>
+		<a href="###">用户名<span>X</span></a>
+	</li> -->
+</ul>
+</body>
+<script type="text/javascript">
+var txt1 = document.querySelector("#txt1");
+var txt2 = document.querySelector("#txt2");
+var btn1 = document.querySelector("#btn1");
+var ul1 = document.querySelector("#ul1");
+
+btn1.onclick = function (){
+
+	var liObj = document.createElement("li");
+	/*liObj.innerHTML = '<p>'+txt2.value+'</p>'+
+		'<a href="###">'+txt1.value+'<span>X</span></a>';*/
+	liObj.innerHTML = `
+		<p>${txt2.value}</p>
+		<a href="###">${txt1.value}<span>X</span></a>
+	`;
+	ul1.appendChild(liObj);
+}
+</script>
+</html>
